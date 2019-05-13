@@ -81,7 +81,8 @@ struct Link: Codable  {
     var ups: Int
     var num_comments: Int
     var subreddit: String
-    
+    var app_user_read: Bool?
+
     var created:Date? {
         return Date(timeIntervalSince1970: TimeInterval(self.created_utc))
     }

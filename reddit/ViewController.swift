@@ -85,6 +85,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        redditLinks[indexPath.row].app_user_read = true
+        tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+    }
+    
 }
 
 extension Date {

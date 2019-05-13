@@ -15,13 +15,14 @@ class LinkTableViewCell: UITableViewCell {
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var commentsButton: UIButton!
-
+    @IBOutlet weak var unreadIndicatorView: UIView!
+    
     func configureWith(link:Link, imageCompletion:@escaping (_ thumbImage:UIImage?)->()) {
         titleLabel.text = link.title
         authorLabel.text = link.author
         commentsButton.setTitle("\(link.num_comments) comments", for: UIControl.State.normal)
         timeAgoLabel.text = link.created?.timeAgo() ?? ""
-
+        unreadIndicatorView.isHidden = link.app_user_read ?? false
         loadThumbnailFromWeb(url: link.thumbnail, completionHandler:imageCompletion)
     }
     func setThumbnail(_ image:UIImage?) {
