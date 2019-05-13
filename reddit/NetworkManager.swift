@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum NetworkManagerError: Error {
     case EndpointError(reason: String)
@@ -80,6 +81,10 @@ struct Link: Codable  {
     var ups: Int
     var num_comments: Int
     var subreddit: String
+    
+    var created:Date? {
+        return Date(timeIntervalSince1970: TimeInterval(self.created_utc))
+    }
 }
 
 struct ListingData: Codable {
@@ -131,4 +136,48 @@ class NetworkManager {
             completionHandler(links, nil)
         }
     }
+    
+    static var imageCache = NSCache<NSString, UIImage>()
+    
+    static func loadImageFromWeb(url:String, completionHandler:@escaping (_ image:UIImage?) -> Void) {
+        
+        if let imageFromCache = imageCache.object(forKey: url as NSString) {
+            // Call completion handler with image from cache
+            completionHandler(imageFromCache)
+            return
+        }
+        
+        guard let endpointUrl = URL(string: url) else {
+            completionHandler(nil)
+            return
+        }
+        let urlRequest = URLRequest(url: endpointUrl)
+        
+        // Setup data task
+        let task = URLSession.shared.dataTask(with: urlRequest) {
+            (data, response, error) in
+            
+            // Network request checks
+            guard error == nil, let responseData = data else {
+                completionHandler(nil)
+                return
+            }
+            
+            guard let image = UIImage(data: responseData) else {
+                completionHandler(nil)
+                return
+            }
+            
+            // Add to Cache
+            imageCache.setObject(image, forKey: url as NSString)
+            
+            // Call completion handler with image
+            completionHandler(image)
+        }
+        // Run data task
+        task.resume()
+
+        
+    }
+    
 }

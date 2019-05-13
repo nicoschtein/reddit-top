@@ -13,6 +13,7 @@
 		037F8EE222860BAC006F2B7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 037F8EE122860BAC006F2B7F /* Assets.xcassets */; };
 		037F8EE522860BAC006F2B7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 037F8EE322860BAC006F2B7F /* LaunchScreen.storyboard */; };
 		037F8EEE22860DB8006F2B7F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037F8EEC22860DB8006F2B7F /* NetworkManager.swift */; };
+		037F8EF12286314E006F2B7F /* TableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037F8EF02286314E006F2B7F /* TableViewCells.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		037F8EE422860BAC006F2B7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		037F8EE622860BAC006F2B7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		037F8EEC22860DB8006F2B7F /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		037F8EF02286314E006F2B7F /* TableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCells.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				037F8EDA22860BAA006F2B7F /* AppDelegate.swift */,
 				037F8EDC22860BAA006F2B7F /* ViewController.swift */,
 				037F8EDE22860BAA006F2B7F /* Main.storyboard */,
+				037F8EF02286314E006F2B7F /* TableViewCells.swift */,
 				037F8EE122860BAC006F2B7F /* Assets.xcassets */,
 				037F8EE322860BAC006F2B7F /* LaunchScreen.storyboard */,
 				037F8EE622860BAC006F2B7F /* Info.plist */,
@@ -141,6 +144,7 @@
 				037F8EDD22860BAA006F2B7F /* ViewController.swift in Sources */,
 				037F8EDB22860BAA006F2B7F /* AppDelegate.swift in Sources */,
 				037F8EEE22860DB8006F2B7F /* NetworkManager.swift in Sources */,
+				037F8EF12286314E006F2B7F /* TableViewCells.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
