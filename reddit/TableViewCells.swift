@@ -69,3 +69,9 @@ class ZeroStateTableViewCell: UITableViewCell {
         return "ZeroStateTableViewCell"
     }
 }
+
+class LoadingStateTableViewCell: UITableViewCell {    
+    static var cellIdentifier:String {
+        return "LoadingStateTableViewCell"
+    }
+}

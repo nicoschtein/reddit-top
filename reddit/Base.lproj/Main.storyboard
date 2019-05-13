@@ -111,17 +111,17 @@
                                             <outlet property="unreadIndicatorView" destination="EBA-KC-Zkf" id="rkv-4s-rEU"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ZeroStateTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ZeroStateTableViewCell" rowHeight="150" id="QRZ-2K-Zpx" customClass="ZeroStateTableViewCell" customModule="reddit" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ZeroStateTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ZeroStateTableViewCell" rowHeight="150" id="2uU-wF-9dn" customClass="ZeroStateTableViewCell" customModule="reddit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="208" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QRZ-2K-Zpx" id="kHQ-7n-bQP">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2uU-wF-9dn" id="EvO-cz-B26">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No links to show yet, please pull to refresh!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ijs-VB-eAe">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No links to show yet, please pull to refresh!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lMD-MG-qGI">
                                                     <rect key="frame" x="16.5" y="61" width="342" height="25"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="zNF-DI-oY1"/>
+                                                        <constraint firstAttribute="height" constant="25" id="If8-mq-jjN"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
@@ -129,20 +129,41 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ijs-VB-eAe" firstAttribute="top" secondItem="kHQ-7n-bQP" secondAttribute="topMargin" constant="50" id="9cE-m1-1An"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ijs-VB-eAe" secondAttribute="bottom" constant="50" id="QaT-sz-lxz"/>
-                                                <constraint firstItem="ijs-VB-eAe" firstAttribute="centerX" secondItem="kHQ-7n-bQP" secondAttribute="centerX" id="tft-An-JO4"/>
-                                                <constraint firstItem="ijs-VB-eAe" firstAttribute="centerY" secondItem="kHQ-7n-bQP" secondAttribute="centerY" id="xvZ-hz-lT7"/>
+                                                <constraint firstItem="lMD-MG-qGI" firstAttribute="top" secondItem="EvO-cz-B26" secondAttribute="topMargin" constant="50" id="5mY-8Z-EpM"/>
+                                                <constraint firstItem="lMD-MG-qGI" firstAttribute="centerX" secondItem="EvO-cz-B26" secondAttribute="centerX" id="dSn-LI-xZJ"/>
+                                                <constraint firstItem="lMD-MG-qGI" firstAttribute="centerY" secondItem="EvO-cz-B26" secondAttribute="centerY" id="ogQ-FB-uYc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lMD-MG-qGI" secondAttribute="bottom" constant="50" id="zGl-f4-kpR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="titleLabel" destination="ijs-VB-eAe" id="hSW-Jh-3Bc"/>
+                                            <outlet property="titleLabel" destination="lMD-MG-qGI" id="EaQ-wa-Ynf"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="LoadingStateTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoadingStateTableViewCell" rowHeight="50" id="QRZ-2K-Zpx" userLabel="LoadingStateTableViewCell" customClass="LoadingStateTableViewCell" customModule="reddit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="358" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QRZ-2K-Zpx" id="kHQ-7n-bQP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="uUn-uK-V3a">
+                                                    <rect key="frame" x="169" y="7" width="37" height="35.5"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="uUn-uK-V3a" firstAttribute="centerX" secondItem="kHQ-7n-bQP" secondAttribute="centerX" id="NBo-oH-kOD"/>
+                                                <constraint firstItem="uUn-uK-V3a" firstAttribute="top" secondItem="kHQ-7n-bQP" secondAttribute="top" constant="7" id="bAZ-Lk-A4B"/>
+                                                <constraint firstItem="uUn-uK-V3a" firstAttribute="centerY" secondItem="kHQ-7n-bQP" secondAttribute="centerY" id="rzg-Bx-iWN"/>
+                                                <constraint firstAttribute="bottom" secondItem="uUn-uK-V3a" secondAttribute="bottom" constant="7" id="wTw-UV-kcL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="haT-BA-waI"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="4Ks-PW-4hB"/>
+                                    <outlet property="prefetchDataSource" destination="BYZ-38-t0r" id="aNd-RL-Pzp"/>
                                 </connections>
                             </tableView>
                         </subviews>
