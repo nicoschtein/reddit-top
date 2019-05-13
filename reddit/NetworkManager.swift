@@ -139,7 +139,6 @@ class NetworkManager {
                 return
             }
 
-            debugPrint(listing)
             let links = listing.data.children.compactMap({ (child) -> Link? in
                 return child.data
             })

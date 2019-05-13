@@ -216,6 +216,18 @@
                                                 </connections>
                                             </button>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="JEl-0n-evq">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5cY-gr-Xwq">
+                                                <rect key="frame" x="276" y="5" width="83" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Save">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="saveButtonTapped:" destination="JOc-9j-agx" eventType="touchUpInside" id="75s-So-5c3"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -233,6 +245,7 @@
                         <viewLayoutGuide key="safeArea" id="8Ct-Sj-aVR"/>
                     </view>
                     <connections>
+                        <outlet property="saveButton" destination="5cY-gr-Xwq" id="dUw-Wf-rhd"/>
                         <outlet property="webView" destination="53n-73-cdp" id="qxu-26-ahG"/>
                     </connections>
                 </viewController>
