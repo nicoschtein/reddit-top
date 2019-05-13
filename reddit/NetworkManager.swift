@@ -81,8 +81,12 @@ struct Link: Codable  {
     var ups: Int
     var num_comments: Int
     var subreddit: String
+    var post_hint: String?
     var app_user_read: Bool?
 
+    var isImage:Bool {
+        return (post_hint ?? "") == "image"
+    }
     var created:Date? {
         return Date(timeIntervalSince1970: TimeInterval(self.created_utc))
     }

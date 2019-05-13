@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03541DE62289556A00462D23 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541DE52289556A00462D23 /* ImageViewController.swift */; };
 		037F8EDB22860BAA006F2B7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037F8EDA22860BAA006F2B7F /* AppDelegate.swift */; };
 		037F8EDD22860BAA006F2B7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037F8EDC22860BAA006F2B7F /* ViewController.swift */; };
 		037F8EE022860BAA006F2B7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 037F8EDE22860BAA006F2B7F /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03541DE52289556A00462D23 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		037F8ED722860BAA006F2B7F /* reddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reddit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		037F8EDA22860BAA006F2B7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		037F8EDC22860BAA006F2B7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				037F8EDC22860BAA006F2B7F /* ViewController.swift */,
 				037F8EDE22860BAA006F2B7F /* Main.storyboard */,
 				037F8EF02286314E006F2B7F /* TableViewCells.swift */,
+				03541DE52289556A00462D23 /* ImageViewController.swift */,
 				037F8EE122860BAC006F2B7F /* Assets.xcassets */,
 				037F8EE322860BAC006F2B7F /* LaunchScreen.storyboard */,
 				037F8EE622860BAC006F2B7F /* Info.plist */,
@@ -143,6 +146,7 @@
 			files = (
 				037F8EDD22860BAA006F2B7F /* ViewController.swift in Sources */,
 				037F8EDB22860BAA006F2B7F /* AppDelegate.swift in Sources */,
+				03541DE62289556A00462D23 /* ImageViewController.swift in Sources */,
 				037F8EEE22860DB8006F2B7F /* NetworkManager.swift in Sources */,
 				037F8EF12286314E006F2B7F /* TableViewCells.swift in Sources */,
 			);

@@ -13,11 +13,15 @@ class LinkTableViewCell: UITableViewCell {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var timeAgoLabel: UILabel!
     @IBOutlet weak var thumbnailImageView: UIImageView!
+    @IBOutlet weak var thumbnailButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var commentsButton: UIButton!
     @IBOutlet weak var unreadIndicatorView: UIView!
     
+    var link:Link?
+    
     func configureWith(link:Link, imageCompletion:@escaping (_ thumbImage:UIImage?)->()) {
+        self.link = link
         titleLabel.text = link.title
         authorLabel.text = link.author
         commentsButton.setTitle("\(link.num_comments) comments", for: UIControl.State.normal)
@@ -41,6 +45,14 @@ class LinkTableViewCell: UITableViewCell {
         }
     }
 
+    @IBAction func thumbnailButtonTapped(_ sender: Any) {
+        if let isImage = link?.isImage, isImage == true {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let imageViewController = storyboard.instantiateViewController(withIdentifier: ImageViewController.identifier) as! ImageViewController
+            imageViewController.imageUrl = link?.url
+            self.window?.rootViewController?.present(imageViewController, animated: true, completion: nil)
+        }
+    }
     @IBAction func commentsButtonTapped(_ sender: Any) {
         
     }
